@@ -17,6 +17,12 @@ method_dict = {
 
 class DynamicMethod(type):
     def __new__(cls, name, bases, dct):
+        """
+        @param name:class name
+        @type name:class
+        @param bases:base class
+        @type bases:class   
+        """
         if name[:3] == 'Abc':
             dct.update(method_dict)
         return type.__new__(cls, name, bases, dct)
