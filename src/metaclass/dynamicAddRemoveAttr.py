@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 dynamic remove and add attributes or functions of class or instance
@@ -18,10 +18,11 @@ method_dict = {
 class DynamicMethod(type):
     def __new__(cls, name, bases, dct):
         """
-        @param name:class name
-        @type name:class
-        @param bases:base class
-        @type bases:class   
+        :Parameters:
+            cls : class
+            name : class name
+            bases : base classes
+            dct : __dict__ 
         """
         if name[:3] == 'Abc':
             dct.update(method_dict)
