@@ -1,7 +1,7 @@
 def foo():
     """   
     :Parameters:
-        dest : `studio.utils.path.Path`
+        dest : 
             The destination path for the copy.
         symlinks : `bool`
             If True, copy the target of each symlink.  If False,
